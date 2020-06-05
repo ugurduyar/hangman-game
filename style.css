@@ -13,7 +13,9 @@ body {
   margin: 0;
   overflow: hidden;
 }
-
+p {
+  font-size: 25px;
+}
 h1 {
   margin: 20px 0 0;
 }
