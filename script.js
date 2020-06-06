@@ -15,4 +15,35 @@ const words = [
   "county",
   "thinker",
   "player",
+  "awesome",
+  "global",
 ];
+
+let selectedWord = words[Math.floor(Math.random() * words.length)];
+
+const correctLetters = [];
+const wrongLetters = [];
+
+function displayWord() {
+  wordEl.innerHTML = ` 
+    ${selectedWord
+      .split("")
+      .map(
+        (letter) => `
+      <span class="letter"> 
+      ${correctLetters.includes(letter) ? letter : ""}
+      </span>
+    `
+      )
+      .join("")}
+    
+  `;
+  const innerWord = wordEl.innerText.replace(/\n/g, "");
+
+  if (innerWord === selectedWord) {
+    finalMessage.innerText = "Congratulations!";
+    popup.style.display = "flex";
+  }
+}
+
+displayWord();
