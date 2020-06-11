@@ -63,7 +63,7 @@ function updateWrongLettersEl() {
   });
 
   if (wrongLetters.length === figureParts.length) {
-    finalMessage.innerText = "You lost :(";
+    finalMessage.innerText = `You lost, Word was "${selectedWord}" `;
     popup.style.display = "flex";
   }
 }
